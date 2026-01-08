@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Zoe Panou</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Tailwind Config -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            accent: '#7D9D6C',
+            accent2: '#D4A373',
+            ink: '#2F2A24',
+            paper: '#F7F3EE',
+            card: '#FFFFFF'
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    crossorigin="anonymous"
+  />
+
+  <style>
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+    }
+
+    .soft-shadow {
+      box-shadow:
+        0 1px 1px rgba(0,0,0,0.04),
+        0 10px 30px rgba(0,0,0,0.06);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease;
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body class="bg-paper text-ink antialiased scroll-smooth">
+
+<!-- NAV -->
+<nav class="fixed top-0 inset-x-0 z-50 bg-paper/80 backdrop-blur ring-1 ring-black/5">
+  <div class="max-w-6xl mx-auto px-6 h-14 flex items-center justify-between">
+    <span class="font-semibold text-sm tracking-wide">
+      Zoe Panou
+    </span>
+
+    <div class="hidden md:flex items-center gap-8 text-sm text-ink/70">
+      <a href="#about" class="hover:text-accent transition">About</a>
+      <a href="cvz.pdf" class="hover:text-accent transition">CV</a>
+    </div>
+  </div>
+</nav>
+
+<!-- MAIN -->
+<main class="max-w-6xl mx-auto px-6 pt-28 pb-20">
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-14">
+
+    <!-- LEFT -->
+    <section class="md:col-span-2 space-y-16">
+
+      <!-- HERO -->
+      <div id="about" class="reveal space-y-5">
+        <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight">
+          Zoe Panou
+        </h1>
+
+        <p class="text-lg text-ink/70 max-w-xl">
+          Associate Researcher working on Digital Twins, Machine Learning,
+          and cloud-native systems for Industry 4.0.
+        </p>
+
+        <div class="flex flex-wrap items-center gap-4 text-sm text-ink/60">
+          <span class="inline-flex items-center gap-2">
+            <i class="fa-solid fa-location-dot text-accent"></i>
+            Patras, Greece
+          </span>
+          <span class="inline-flex items-center gap-2">
+            <i class="fa-solid fa-building text-accent"></i>
+            Athena Research & Innovation Center
+          </span>
+        </div>
+      </div>
+
+      <!-- ABOUT TEXT -->
+      <div class="reveal max-w-2xl text-ink/80 leading-relaxed">
+        <p>
+          I am a graduate of the Computer Engineering and Informatics Department
+          at the University of Patras. My academic work focused on
+          digital-twin-driven predictive maintenance, combining machine learning
+          models with cloud-native architectures for fault detection and monitoring.
+        </p>
+        <p class="mt-4">
+          I currently contribute to EU-funded research projects at the Athena
+          Research and Innovation Center, working on LLM-assisted optimization
+          and automated monitoring for Beyond-5G and Industry 4.0 systems.
+        </p>
+      </div>
+
+      <!-- FOCUS AREAS -->
+      <div class="reveal space-y-6">
+        <div>
+          <h2 class="text-xl font-semibold">Focus Areas</h2>
+          <p class="text-sm text-ink/60 mt-1">
+            Applied research & production-oriented systems
+          </p>
+        </div>
+
+        <ul class="space-y-3 text-ink/75">
+          <li class="flex items-center gap-3">
+            <i class="fa-solid fa-gear text-accent"></i>
+            Predictive maintenance & digital twins
+          </li>
+          <li class="flex items-center gap-3">
+            <i class="fa-solid fa-chart-line text-accent"></i>
+            Data analytics pipelines (Python, NumPy, pandas)
+          </li>
+          <li class="flex items-center gap-3">
+            <i class="fa-solid fa-cloud text-accent"></i>
+            Cloud-native deployment (Docker, Kubernetes)
+          </li>
+          <li class="flex items-center gap-3">
+            <i class="fa-solid fa-brain text-accent"></i>
+            LLM-assisted optimization & decision support
+          </li>
+        </ul>
+      </div>
+
+      <!-- EXPERIENCE -->
+      <div class="reveal space-y-6">
+        <h2 class="text-xl font-semibold">Experience</h2>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+
+          <div class="rounded-3xl bg-card ring-1 ring-black/5 p-6 soft-shadow hover:-translate-y-1 transition">
+            <div class="flex justify-between items-start">
+              <div>
+                <h3 class="font-semibold">Associate Researcher</h3>
+                <p class="text-sm text-ink/60 mt-1">
+                  Athena Research & Innovation Center
+                </p>
+              </div>
+              <span class="text-xs text-ink/50">2024 — Present</span>
+            </div>
+
+            <ul class="mt-4 text-sm text-ink/75 space-y-2">
+              <li>• LLM-assisted optimization for large-scale systems</li>
+              <li>• Automated monitoring & analytics workflows</li>
+            </ul>
+          </div>
+
+          <div class="rounded-3xl bg-card ring-1 ring-black/5 p-6 soft-shadow hover:-translate-y-1 transition">
+            <div class="flex justify-between items-start">
+              <div>
+                <h3 class="font-semibold">MEng Thesis</h3>
+                <p class="text-sm text-ink/60 mt-1">
+                  Digital Twin-Driven Predictive Maintenance
+                </p>
+              </div>
+              <span class="text-xs text-ink/50">2019 — 2024</span>
+            </div>
+
+            <ul class="mt-4 text-sm text-ink/75 space-y-2">
+              <li>• ML-based vehicle fault detection</li>
+              <li>• Cloud-oriented data integration</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- CV -->
+      <div class="reveal">
+        <a href="cvz.pdf"
+           class="inline-flex items-center gap-3 px-6 py-3 rounded-3xl
+                  bg-card ring-1 ring-black/10 soft-shadow
+                  font-medium hover:-translate-y-1 transition">
+          <i class="fa-solid fa-file-pdf text-accent"></i>
+          Download CV
+        </a>
+      </div>
+
+    </section>
+
+    <!-- RIGHT SIDEBAR -->
+    <aside class="reveal space-y-6">
+
+      <div class="rounded-3xl bg-card ring-1 ring-black/5 p-6 soft-shadow">
+        <div class="flex items-center gap-4">
+          <img src="images/image.png"
+               alt="Zoe Panou"
+               class="w-20 h-20 rounded-2xl object-cover soft-shadow" />
+          <div>
+            <p class="font-semibold">Zoe Panou</p>
+            <p class="text-sm text-ink/60">ML · Cloud · Digital Twins</p>
+          </div>
+        </div>
+
+        <div class="mt-5 space-y-3 text-sm text-ink/70">
+          <p class="flex items-center gap-2">
+            <i class="fa-solid fa-envelope text-accent"></i>
+            zoepanou55@gmail.com
+          </p>
+          <p class="flex items-center gap-2">
+            <i class="fa-brands fa-github text-accent"></i>
+            github.com/zoep28
+          </p>
+        </div>
+      </div>
+
+      <div class="rounded-3xl bg-card ring-1 ring-black/5 p-6 soft-shadow">
+        <h3 class="text-sm font-semibold mb-3">Quick Skills</h3>
+        <div class="flex flex-wrap gap-2 text-xs">
+          <span class="px-3 py-1 rounded-full bg-accent/15">Python</span>
+          <span class="px-3 py-1 rounded-full bg-accent/15">scikit-learn</span>
+          <span class="px-3 py-1 rounded-full bg-accent/15">TensorFlow</span>
+          <span class="px-3 py-1 rounded-full bg-accent2/20">Docker</span>
+          <span class="px-3 py-1 rounded-full bg-accent2/20">Kubernetes</span>
+          <span class="px-3 py-1 rounded-full bg-black/5">SQL · MongoDB</span>
+        </div>
+      </div>
+
+    </aside>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="ring-1 ring-black/5 bg-paper/80 backdrop-blur">
+  <div class="max-w-6xl mx-auto px-6 py-10 text-xs text-ink/55 flex flex-col md:flex-row justify-between gap-2">
+    <p>© <span id="year"></span> Zoe Panou</p>
+    <p>Built with HTML & Tailwind CSS</p>
+  </div>
+</footer>
+
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => e.isIntersecting && e.target.classList.add('active'));
+  }, { threshold: 0.15 });
+  reveals.forEach(r => observer.observe(r));
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
